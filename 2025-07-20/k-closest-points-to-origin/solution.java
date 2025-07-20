@@ -15,7 +15,7 @@ class Solution {
         int[][]ans;
         ans=new int[2][2];
         for(int i=0;i<k;i++){
-            ans[i]=lis.get(i);
+            ans[i][i]=lis.get(i);
         }
         return ans;
 

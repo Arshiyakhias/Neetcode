@@ -21,7 +21,7 @@ class Solution {
         }
         int current = grid[i][j];
         grid[i][j]=0;
-        int sum=sum+current;
+        int sum=current;
         sum=sum+dfs(grid,i+1,j);
         sum=sum+dfs(grid,i-1,j);
         sum=sum+dfs(grid,i,j+1);

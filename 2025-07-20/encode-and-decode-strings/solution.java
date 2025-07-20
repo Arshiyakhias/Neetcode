@@ -9,7 +9,7 @@ class Solution {
             enc=enc+word;
 
         }
-        return encode;
+        return enc;
 
     }
 

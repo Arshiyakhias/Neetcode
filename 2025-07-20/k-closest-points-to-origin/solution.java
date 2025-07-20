@@ -14,8 +14,10 @@ class Solution {
         );
         int[][]ans;
         ans=new int[2][2];
-        for(int i=0;i<k;i++){
-            ans[i][i]=lis.get(i);
+        for(int i=0;i<ans.length;i++){
+            for(int j=0;j<ans[i].length;j++){
+                ans[i][j]=lis.get(i);
+            }
         }
         return ans;
 

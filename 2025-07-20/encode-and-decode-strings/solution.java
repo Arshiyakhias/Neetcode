@@ -15,7 +15,7 @@ class Solution {
 
     public List<String> decode(String str) {
         String[]arr=str.split("#");
-        List<String>ans=new String<>();
+        List<String>ans=new ArrayList<>();
         for(int i=0;i<arr.length;i++){
             ans.add(arr[i]);
         }

@@ -9,7 +9,7 @@ class Solution {
             lis.add(addon);
         }
 
-        Collectios.sort(lis,(a,b)->
+        Collections.sort(lis,(a,b)->
         Integer.compare(a[0]*a[0]+a[1]*a[1],b[0]*b[0]+b[1]*b[1])
         );
         int[][]ans;

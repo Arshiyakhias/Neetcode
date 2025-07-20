@@ -5,7 +5,7 @@ class Solution {
         );
         int[][]ans;
         ans=new int[2][2];
-        for(int i=0;i<points.length;i++ ){
+        for(int i=0;i<k;i++ ){
             ans[i]=points[i];
         }
         return ans;

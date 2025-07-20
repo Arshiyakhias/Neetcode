@@ -5,8 +5,9 @@ class Solution {
         for(String word:strs){
 
            
-            enc=enc+"#";
+            
             enc=enc+word;
+            enc=enc+"#";
 
         }
         return enc;

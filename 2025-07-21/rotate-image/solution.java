@@ -12,7 +12,7 @@ class Solution {
         for(int i=0;i<matrix.length;i++){
             for(int j=0;j<matrix[i].length/2;j++){
                 int temp1=matrix[i][j];
-                int matrix[i][j]=matrix[i][matrix.length-j-1];
+                matrix[i][j]=matrix[i][matrix.length-j-1];
                 matrix[i][matrix.length-j-1]=temp1;
             }
         }

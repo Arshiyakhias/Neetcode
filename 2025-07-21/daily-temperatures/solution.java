@@ -1,6 +1,10 @@
 class Solution {
     public int[] dailyTemperatures(int[] temperatures) {
         Stack<Integer>st=new Stack<>();
+        HashMap<Integer,Integer>map=new HashMap<>();
+        for(int i=0;i<temperatures.length;i++){
+            map.put(temperatures[i],i);
+        }
         for(int i=temperatures.length-1;i>=0;i--){
             if(st.isEmpty()){
                 st.push(temperatures[i]);
@@ -10,7 +14,8 @@ class Solution {
             }
             else if(st.peek()>temperatures[i]){
                 int curr=temperatures[i];
-                temperatures[i]=st.peek();
+                //temperatures[i]=st.peek();
+                temperatures[i]=map.get(st.peek)-i;
                 st.push(curr);
                 
             }
@@ -25,7 +30,8 @@ class Solution {
                 }
                 else{
                     int curr1=temperatures[i];
-                    temperatures[i]=st.peek();
+                    //temperatures[i]=st.peek();
+                    temperatures[i]=map.get(st.peek)-i;
                     st.push(curr1);
                     
 

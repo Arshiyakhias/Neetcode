@@ -8,7 +8,7 @@ class Solution {
                 break;
             
             }
-            if(st.peek()>temperatures[i]){
+            else if(st.peek()>temperatures[i]){
                 st.push(temperatures[i]);
                 temperatures[i]=st.peek();
             }

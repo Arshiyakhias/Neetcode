@@ -9,8 +9,9 @@ class Solution {
             
             }
             else if(st.peek()>temperatures[i]){
-                st.push(temperatures[i]);
                 temperatures[i]=st.peek();
+                st.push(temperatures[i]);
+                
             }
             else if(st.peek()<temperatures[i]){
                 while(!st.isEmpty() && st.peek()<=temperatures[i]){

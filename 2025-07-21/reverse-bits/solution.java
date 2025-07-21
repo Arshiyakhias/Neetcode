@@ -6,6 +6,6 @@ class Solution {
             bin=bin+fin;
             n=n/10;
         }
-        return Integer.parseInt(bin,2);
+        return Integer.parseInt(bin,32);
     }
 }

@@ -4,7 +4,7 @@ class Solution {
             for(int j=0;j<matrix[i].length;j++){
                 if(i!=j && i<j){
                     int temp=matrix[i][j];
-                    int matrix[i][j]=matrix[j][i];
+                    matrix[i][j]=matrix[j][i];
                     matrix[j][i]=matrix[i][j];
                 }
             }

@@ -31,7 +31,7 @@ class Solution {
                 else{
                     int curr1=temperatures[i];
                     //temperatures[i]=st.peek();
-                    temperatures[i]=map.get(st.peek)-i;
+                    temperatures[i]=map.get(st.peek())-i;
                     st.push(curr1);
                     
 

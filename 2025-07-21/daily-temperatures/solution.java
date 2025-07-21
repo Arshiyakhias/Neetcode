@@ -16,7 +16,7 @@ class Solution {
                 }
                 if(st.isEmpty()){
                     st.push(temperatures[i]);
-                    temparatures[i]=0;
+                    temperatures[i]=0;
 
                 }
                 else{

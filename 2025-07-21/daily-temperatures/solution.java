@@ -1,6 +1,6 @@
 class Solution {
     public int[] dailyTemperatures(int[] temperatures) {
-        Stack<Integer>st=newStack<>();
+        Stack<Integer>st=new Stack<>();
         for(int i=temperatures.length-1;i>=0;i--){
             if(st.isEmpty()){
                 st.push(temperatures[i]);

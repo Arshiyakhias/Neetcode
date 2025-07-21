@@ -2,7 +2,7 @@ class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
         HashMap<String,ArrayList<String>>map=new HashMap<>();
         for(String word:strs){
-            char[]arr=word.split("");
+            String[]arr=word.split("");
 
         }
     }

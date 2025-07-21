@@ -3,36 +3,37 @@ class Solution {
         Stack<Integer>st=new Stack<>();
         HashMap<Integer,Integer>map=new HashMap<>();
         for(int i=0;i<temperatures.length;i++){
-            map.put(temperatures[i],i);
+            map.put(i,temperatures[i]);
         }
         for(int i=temperatures.length-1;i>=0;i--){
             if(st.isEmpty()){
-                st.push(temperatures[i]);
+                st.push(i);
                 temperatures[i]=0;
               
             
             }
-            else if(st.peek()>temperatures[i]){
-                int curr=temperatures[i];
+            else if(map.get(st.peek())>temperatures[i]){
+             
                 //temperatures[i]=st.peek();
-                temperatures[i]=map.get(st.peek())-i;
-                st.push(curr);
+                temperatures[i]=st.peek()-i;
+                st.push(i);
                 
             }
-            else if(st.peek()<temperatures[i]){
-                while(!st.isEmpty() && st.peek()<=temperatures[i]){
+            
+            else if(map.get(st.peek())<=temperatures[i]){
+                while(!st.isEmpty() && map.get(st.peek())<=temperatures[i]){
                     st.pop();
                 }
                 if(st.isEmpty()){
-                    st.push(temperatures[i]);
+                    st.push(i);
                     temperatures[i]=0;
 
                 }
                 else{
                     int curr1=temperatures[i];
                     //temperatures[i]=st.peek();
-                    temperatures[i]=map.get(st.peek())-i;
-                    st.push(curr1);
+                    temperatures[i]=st.peek()-i;
+                    st.push(i);
                     
 
                 }

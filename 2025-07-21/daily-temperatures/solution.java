@@ -15,7 +15,7 @@ class Solution {
             else if(st.peek()>temperatures[i]){
                 int curr=temperatures[i];
                 //temperatures[i]=st.peek();
-                temperatures[i]=map.get(st.peek)-i;
+                temperatures[i]=map.get(st.peek())-i;
                 st.push(curr);
                 
             }

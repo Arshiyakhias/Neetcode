@@ -14,6 +14,9 @@ class Solution {
         if(list1==null && list2!=null){
             return list2;
 
+        }if(list1!=null && list2==null){
+            return list1;
+
         }
         if(list1==null && list2==null){
             return list1;

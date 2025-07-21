@@ -1,22 +1,53 @@
-class Solution {
-    public List<List<String>> groupAnagrams(String[] strs) {
-        HashMap<String,ArrayList<String>>map=new HashMap<>();
-        for(String word:strs){
-            String[]arr=word.split("");
-            Arrays.sort(arr);
-            String sorts=new String();
-            for(int i=0;i<arr.length;i++){
-                sorts=sorts+arr[i];
-            }
-            if(map.containsKey(sorts)){
-                map.get(sorts).add(word);
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
 
-            }
-            else{
-                map.put(sorts,new ArrayList<>());
-                map.get(sorts).add(word);
-            }
+class Solution {
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        if(list1==null && list2!=null){
+            return list2;
+
+        }if(list1!=null && list2==null){
+            return list1;
 
         }
+        if(list1==null && list2==null){
+            return list1;
+
+        }
+        ArrayList<Integer>lis=new ArrayList<>();
+        ListNode curr1=list1;
+        ListNode curr2=list2;
+        while(curr1!=null){
+            lis.add(curr1.val);
+            curr1=curr1.next;
+        }
+        while(curr2!=null){
+            lis.add(curr2.val);
+            curr2=curr2.next;
+        }
+        Collections.sort(lis);
+        ListNode curr=list1;
+        while(curr.next!=null){
+          
+            curr=curr.next;
+        }
+        curr.next=list2;
+        ListNode fin=list1;
+        int i=0;
+        while(fin!=null){
+            fin.val=lis.get(i);
+            i++;
+            fin=fin.next;
+
+        }
+        return list1;
     }
 }

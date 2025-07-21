@@ -21,7 +21,7 @@ class Solution {
                 }
                 else{
                     st.push(temperatures[i]);
-                    temparatures[i]=st.peek();
+                    temperatures[i]=st.peek();
 
                 }
             }

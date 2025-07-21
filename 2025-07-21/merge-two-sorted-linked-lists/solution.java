@@ -23,7 +23,7 @@ class Solution {
             curr2=curr2.next;
         }
         Collections.sort(lis);
-        LstNode curr=lis1;
+        ListNode curr=lis1;
         while(curr.next!=null){
           
             curr=curr.next;

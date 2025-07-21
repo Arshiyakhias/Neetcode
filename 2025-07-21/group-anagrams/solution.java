@@ -3,6 +3,18 @@ class Solution {
         HashMap<String,ArrayList<String>>map=new HashMap<>();
         for(String word:strs){
             String[]arr=word.split("");
+            Arrays.sort(arr);
+            String sorts=new String();
+            for(int i=0;i<arr.length;i++){
+                sorts=sorts+arr[i];
+            }
+            if(map.containsKey(sorts)){
+                map.get(sorts).add(word);
+
+            }
+            else{
+                map.add(sorts,new ArrayList<>());
+            }
 
         }
     }

@@ -13,7 +13,7 @@ class Solution {
                 st.push(temperatures[i]);
                 
             }
-            else if(st.peek()<temperatures[i]){
+            else {
                 while(!st.isEmpty() && st.peek()<temperatures[i]){
                     st.pop();
                 }

@@ -13,9 +13,14 @@ class Solution {
 
             }
             else{
-                map.add(sorts,new ArrayList<>());
+                map.put(sorts,new ArrayList<>());
+                map.get(sorts).add(word);
             }
 
         }
+
+        List<List<String>> lis = new ArrayList<>(map.values());
+
+        return lis;
     }
 }

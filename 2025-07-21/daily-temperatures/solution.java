@@ -5,7 +5,8 @@ class Solution {
             if(st.isEmpty()){
                 st.push(temperatures[i]);
                 temperatures[i]=0;
-                continue;
+                break;
+            
             }
             if(st.peek()>temperatures[i]){
                 st.push(temperatures[i]);

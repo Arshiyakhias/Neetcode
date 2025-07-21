@@ -10,7 +10,7 @@ class Solution {
                 st.push(temperatures[i]);
                 temperatures[i]=st.peek();
             }
-            if(st.peek()<temperatures[[i]]){
+            if(st.peek()<temperatures[i]){
                 while(st.peek()>temperatures[i]){
                     st.pop();
                 }

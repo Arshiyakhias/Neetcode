@@ -12,7 +12,7 @@ class Solution {
             else{
                 int count=0;
                 int num=nums[i];
-                while(set.contains(num+1)){
+                while(set.contains(num)){
                     num++;
                     count++;
 
@@ -21,6 +21,6 @@ class Solution {
                 max=Math.max(max,count);
             }
         }
-        return max+1;
+        return max;
     }
 }

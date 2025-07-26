@@ -30,7 +30,7 @@ class Solution {
         inorder(first,p);
         inorder(second,q);
         for(int i=0;i<first.size();i++){
-            if(first.get(i)!=secon.get(i)){
+            if(first.get(i)!=second.get(i)){
                 return false;
             }
         }

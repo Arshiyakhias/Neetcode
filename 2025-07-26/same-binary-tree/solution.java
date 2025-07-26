@@ -20,8 +20,9 @@ class Solution {
             lis.add(null);
             return;
         }
-        inorder(lis,root.left);
         lis.add(root.val);
+        inorder(lis,root.left);
+        
         inorder(lis,root.right);
     }
     public boolean isSameTree(TreeNode p, TreeNode q) {
@@ -29,8 +30,11 @@ class Solution {
         ArrayList<Integer>second=new ArrayList<>();
         inorder(first,p);
         inorder(second,q);
+        if(first.size()!=second.size()){
+            return false;
+        }
         for(int i=0;i<first.size();i++){
-            if(first.get(i)!=second.get(i)){
+            if(!Objects.equals(first.get(i),second.get(i))){
                 return false;
             }
         }

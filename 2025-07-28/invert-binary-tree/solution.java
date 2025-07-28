@@ -26,6 +26,7 @@ class Solution {
 
 
     }
+    int count=0;
     private void invert(List<Integer>lis,TreeNode root,int count){
         if(root==null){
 
@@ -45,8 +46,8 @@ class Solution {
         for(int i=lis.size()-1;i>=0;i--){
             inverted.add(lis.get(i));
         }
-        int count=0;
-        invert(inverted,root,count=0);
+        
+        invert(inverted,root,count);
         return root;
 
         

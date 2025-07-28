@@ -43,7 +43,7 @@ class Solution {
         inorder(lis,root);
         List<Integer>inverted=new ArrayList<>();
         for(int i=lis.size()-1;i>=0;i--){
-            inverted.add9lis.get(i);
+            inverted.add(lis.get(i));
         }
         int count=0;
         invert(inverted,root,count);

@@ -33,8 +33,8 @@ class Solution {
             return;
         }
         inorder(inverted,root.left);
-        root.val=inverted.get(count);
-        count++;
+        root.val=inverted.get(count[0]);
+        count[0]++;
         inorder(inverted,root.right);
 
 

@@ -32,7 +32,7 @@ class Solution {
 
             return;
         }
-        inorder(lis,root.left);
+        inorder(inverted,root.left);
         root.val=inverted.get(count);
         count++;
         inorder(lis,root.right);

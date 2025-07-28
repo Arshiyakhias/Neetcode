@@ -17,7 +17,7 @@
 class Solution {
     private void inorder(List<Integer>lis,TreeNode root){
         if(root==null){
-            lis.add(null);
+          
             return;
         }
         inorder(lis,root.left);

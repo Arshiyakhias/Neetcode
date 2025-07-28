@@ -41,7 +41,7 @@ class Solution {
     public TreeNode invertTree(TreeNode root) {
         List<Integer>lis=new ArrayList<>();
         inorder(lis,root);
-        List<Integer>inverted=new ArrayList<>();
+        global List<Integer>inverted=new ArrayList<>();
         for(int i=lis.size()-1;i>=0;i--){
             inverted.add(lis.get(i));
         }

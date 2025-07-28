@@ -15,46 +15,15 @@
  */
 
 class Solution {
-    private void inorder(List<Integer>lis,TreeNode root){
-        if(root==null){
-           
-            return;
-        }
-        inorder(lis,root.left);
-        lis.add(root.val);
-        inorder(lis,root.right);
-
-
-    }
-    
-    private void invert(List<Integer>inverted,TreeNode root,int[]count){
-        if(root==null){
-           
-
-            return;
-        }
-        invert(inverted,root.left,count);
-        root.val=inverted.get(count[0]);
-        count[0]++;
-        invert(inverted,root.right,count);
-
-
-    }
- 
     public TreeNode invertTree(TreeNode root) {
-        List<Integer>lis=new ArrayList<>();
-        inorder(lis,root);
-        List<Integer>inverted=new ArrayList<>();
-        for(int i=lis.size()-1;i>=0;i--){
-            inverted.add(lis.get(i));
-        }
-        int[]count;
-        count=new int[1];
-        count[0]=0;
-        invert(inverted,root,count);
-        return root;
+       if(root==null){
+        return;
+       } 
 
-        
-        
+       TreeNode temp=root.left;
+       root.left=invertTree(root.right);
+       root.right=temp;
+       return root;
+
     }
 }

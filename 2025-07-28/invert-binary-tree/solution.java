@@ -32,10 +32,10 @@ class Solution {
 
             return;
         }
-        invert(inverted,root.left);
+        invert(inverted,root.left,count);
         root.val=inverted.get(count[0]);
         count[0]++;
-        invert(inverted,root.right);
+        invert(inverted,root.right,count);
 
 
     }

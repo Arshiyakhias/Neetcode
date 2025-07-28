@@ -49,6 +49,7 @@ class Solution {
         }
         int[]count;
         count=new int[1];
+        count[0]=0;
         invert(inverted,root,count);
         return root;
 

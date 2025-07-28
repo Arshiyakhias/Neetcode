@@ -35,7 +35,7 @@ class Solution {
         inorder(inverted,root.left);
         root.val=inverted.get(count);
         count++;
-        inorder(lis,root.right);
+        inorder(inverted,root.right);
 
 
     }

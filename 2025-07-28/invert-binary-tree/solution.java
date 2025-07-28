@@ -39,7 +39,7 @@ class Solution {
 
 
     }
-    int count=0;
+ 
     public TreeNode invertTree(TreeNode root) {
         List<Integer>lis=new ArrayList<>();
         inorder(lis,root);

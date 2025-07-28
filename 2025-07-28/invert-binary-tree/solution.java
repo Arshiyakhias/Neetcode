@@ -23,8 +23,9 @@ class Solution {
        
        TreeNode left=invertTree(root.right);
        TreeNode right=invertTree(root.left);
-       root.right=left;
        root.left=right;
+       root.right=left;
+       
        return root;
 
     }

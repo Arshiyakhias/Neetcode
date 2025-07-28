@@ -39,6 +39,7 @@ class Solution {
 
 
     }
+    int count=0;
     public TreeNode invertTree(TreeNode root) {
         List<Integer>lis=new ArrayList<>();
         inorder(lis,root);
@@ -46,7 +47,7 @@ class Solution {
         for(int i=lis.size()-1;i>=0;i--){
             inverted.add(lis.get(i));
         }
-        int count=0;
+        
         invert(inverted,root,count);
         return root;
 

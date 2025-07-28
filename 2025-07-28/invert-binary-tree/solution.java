@@ -15,7 +15,7 @@
  */
 
 class Solution {
-    private static inorder(List<Integer>lis,TreeNode root){
+    private void inorder(List<Integer>lis,TreeNode root){
         if(root==null){
             lis.add(null);
             return;
@@ -26,7 +26,7 @@ class Solution {
 
 
     }
-    private static invert(List<Integer>lis,TreeNode root,int count){
+    private void invert(List<Integer>lis,TreeNode root,int count){
         if(root==null){
 
             return;

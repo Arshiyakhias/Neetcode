@@ -26,7 +26,7 @@ class Solution {
 
 
     }
-    private static inorder(List<Integer>lis,TreeNode root,int count){
+    private static invert(List<Integer>lis,TreeNode root,int count){
         if(root==null){
 
             return;

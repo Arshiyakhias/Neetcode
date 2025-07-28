@@ -46,7 +46,7 @@ class Solution {
             inverted.add(lis.get(i));
         }
         int count=0;
-        invert(inverted,root,count);
+        invert(inverted,root,count=0);
         return root;
 
         

@@ -12,13 +12,13 @@
 class Solution {
     public boolean canAttendMeetings(List<Interval> intervals) {
         HashSet<Integer>set=new HashSet<>();
-        for(List<Integer>lis:intervals){
-            for(int i=lis.get(0);i<=lis.get(1);i++){
-                if(set.contains(lis.get(i))){
+        for(Interval interval:intervals){
+            for(int i=interval.start;i<=interval.end;i++){
+                if(set.contains(i)){
                     return false;
                 }
                 else{
-                    set.add(lis.get(i));
+                    set.add(i);
                 }
 
             }

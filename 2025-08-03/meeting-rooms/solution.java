@@ -11,19 +11,7 @@
 
 class Solution {
     public boolean canAttendMeetings(List<Interval> intervals) {
-        HashSet<Integer>set=new HashSet<>();
-        for(Interval interval:intervals){
-            for(int i=interval.start;i<=interval.end;i++){
-                if(set.contains(i)){
-                    return false;
-                }
-                else{
-                    set.add(i);
-                }
-
-            }
-        }
-        return true;
+        Collections.sort(intervals);
 
     }
 }

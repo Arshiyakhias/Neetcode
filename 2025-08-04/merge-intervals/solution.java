@@ -19,7 +19,10 @@ class Solution {
                 ArrayList<Integer>addon=new ArrayList<>();
                 addon.add(intervals[i][0]);
                 addon.add(intervals[i][1]);
-                lis.add(addon);
+                if(!lis.contains(addon)){
+                    lis.add(addon);
+
+                }
             }
         }
         int[][]ans;

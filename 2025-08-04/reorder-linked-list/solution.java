@@ -20,7 +20,7 @@ class Solution {
         int right=lis.size()-1;
         ListNode curr1=head;
 
-        while(left<right){
+        while(left<=right){
             curr1.val=lis.get(left);
             left++;
             curr1=curr1.next;

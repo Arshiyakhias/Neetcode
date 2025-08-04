@@ -28,6 +28,6 @@ class Solution {
             right--;
             
         }
-        return head;
+        
     }
 }

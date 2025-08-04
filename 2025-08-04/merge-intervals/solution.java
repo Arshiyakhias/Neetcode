@@ -21,8 +21,8 @@ class Solution {
         int[][]ans;
         ans=new int[lis.size()][2];
         for(int i=0;i<ans.length;i++){
-            ans[i][0]=lis.get(i)(0);
-            ans[i][1]=lis.get(i)(1);
+            ans[i][0]=lis.get(i).get(0);
+            ans[i][1]=lis.get(i).get(1);
         }
         return ans;
     }

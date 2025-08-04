@@ -1,6 +1,7 @@
 class Solution {
     public int[][] merge(int[][] intervals) {
         //Arrays.sort(intervals);
+        boolean flag=false;
         List<List<Integer>>lis=new ArrayList<>();
         for(int i=0;i<intervals.length-1;i++){
             if(i!=intervals.length-1 && intervals[i][1]>=intervals[i+1][0] ){
@@ -11,6 +12,7 @@ class Solution {
                     lis.add(addon);
 
                 }
+                
                 
 
 

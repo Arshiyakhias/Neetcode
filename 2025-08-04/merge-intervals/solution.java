@@ -3,7 +3,7 @@ class Solution {
         //Arrays.sort(intervals);
         List<List<Integer>>lis=new ArrayList<>();
         for(int i=0;i<intervals.length;i++){
-            if(intervals[i][1]>=intervals[i+1][0] ){
+            if(i!=intervals.length-1 && intervals[i][1]>=intervals[i+1][0] ){
                 ArrayList<Integer>addon=new ArrayList<>();
                 addon.add(intervals[i][0]);
                 addon.add(intervals[i+1][1]);

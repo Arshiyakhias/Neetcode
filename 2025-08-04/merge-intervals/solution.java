@@ -15,7 +15,7 @@ class Solution {
 
 
             }
-            else if(i!=intervals.length-1 && i+1==nums.length-1 && intervals[i][1]>=intervals[i+1][0] ){
+            else if(i!=intervals.length-1 && i+1==intervals.length-1 && intervals[i][1]>=intervals[i+1][0] ){
                 ArrayList<Integer>addon=new ArrayList<>();
                 addon.add(intervals[i][0]);
                 addon.add(intervals[i+1][1]);

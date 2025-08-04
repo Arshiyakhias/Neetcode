@@ -4,25 +4,12 @@ class Solution {
         List<List<Integer>>lis=new ArrayList<>();
         for(int i=0;i<intervals.length;i++){
             if(intervals[i][1]>=intervals[i+1][0] ){
-                
-                if(i+1==intervals.length){
-                   ArrayList<Integer>addon=new ArrayList<>();
+                ArrayList<Integer>addon=new ArrayList<>();
                 addon.add(intervals[i][0]);
                 addon.add(intervals[i+1][1]);
                 if(!lis.contains(addon)){
                     lis.add(addon);
 
-                } 
-                break;
-                }
-                else{
-                    ArrayList<Integer>addon=new ArrayList<>();
-                addon.add(intervals[i][0]);
-                addon.add(intervals[i+1][1]);
-                if(!lis.contains(addon)){
-                    lis.add(addon);
-
-                }
                 }
                 
 

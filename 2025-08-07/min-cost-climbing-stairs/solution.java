@@ -16,7 +16,7 @@ class Solution {
         ans[0]=cost[0];
         ans[1]=cost[1];
         for(int i=2;i<cost.length;i++){
-            ans[i]=ans[i-1]+cost[i];
+            ans[i]=ans[i-2]+cost[i];
 
         }
         if(ans[ans.length-1]>ans[ans.length-2]){

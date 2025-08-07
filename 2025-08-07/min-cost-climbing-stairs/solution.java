@@ -22,7 +22,7 @@ class Solution {
         if(ans[ans.length-1]>ans[ans.length-2]){
             return ans[ans.length-2];
         }
-        return ans[ans.length-1;]
+        return ans[ans.length-1];
 
 
     }

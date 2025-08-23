@@ -19,6 +19,6 @@ class Solution {
         if(root==null){
             return 0;
         }
-        return Math.max(diameterOfBinaryTree(root.left),diameterOfBinaryTree(root.right));
+        return 1+Math.max(diameterOfBinaryTree(root.left),diameterOfBinaryTree(root.right));
     }
 }

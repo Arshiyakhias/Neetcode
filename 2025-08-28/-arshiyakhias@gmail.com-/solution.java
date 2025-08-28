@@ -15,34 +15,39 @@
  */
 
 class Solution {
-    public List<List<Integer>> levelOrder(TreeNode root) {
+    public List<Integer> rightSideView(TreeNode root) {
+         List<Integer>ans=new ArrayList<>();
         List<List<Integer>>lis=new ArrayList<>();
         if(root==null){
-            return lis;
+            return ans;
         }
         Queue<TreeNode>q=new LinkedList<>();
         q.add(root);
+
         while(!q.isEmpty()){
-            int vals=q.size();
             List<Integer>addon=new ArrayList<>();
+
+            int vals=q.size();
             while(vals!=0){
-                TreeNode curr=q.poll();
-                if(curr.left!=null){
-                    q.add(curr.left);
+                TreeNode check=q.poll();
+                if(check.left!=null){
+                    q.add(check.left);
+
                 }
-               if(curr.right!=null){
-                    q.add(curr.right);
+                if(check.right!=null){
+                    q.add(check.right);
+
                 }
-               
-                addon.add(curr.val);
-
-
-
+                addon.add(check.val);
                 vals--;
             }
             lis.add(addon);
+
         }
-        return lis;
-        
+
+        for(List<Integer>sing:lis){
+            ans.add(sing.get(sing.size()-1));
+        }
+        return ans;
     }
 }

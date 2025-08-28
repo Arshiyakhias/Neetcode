@@ -27,8 +27,13 @@ class Solution {
             List<Integer>addon=new ArrayList<>();
             while(vals!=0){
                 TreeNode curr=q.poll();
-                q.add(curr.left);
-                q.add(curr.right);
+                if(curr.left!=null){
+                    q.add(curr.left);
+                }
+               if(curr.right!=null){
+                    q.add(curr.right);
+                }
+               
                 addon.add(curr.val);
 
 

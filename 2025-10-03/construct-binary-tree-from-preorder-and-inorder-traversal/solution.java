@@ -39,7 +39,7 @@ class Solution {
 
     }
     public TreeNode buildTree(int[] preorder, int[] inorder) {
-        TreeNode ans=solve(int[]preorder,int[]inorder,0,inorder.length-1);
+        TreeNode ans=solve(preorder,inorder,0,inorder.length-1);
         return ans;
         
     }

@@ -26,7 +26,7 @@ class Solution {
     }
 
     private TreeNode solve(int[]preorder,int[]inorder,int inorderStart,int inorderEnd){
-        if(index>=preorder.length || inorderStart>inorderEnd){
+        if(index>preorder.length || inorderStart>inorderEnd){
             return null;
         }
 

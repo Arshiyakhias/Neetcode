@@ -33,8 +33,8 @@ class Solution {
         TreeNode ans=new TreeNode(preorder[index]);
         index++;
         int pos=poscal(inorder,addon.val);
-        ans.left=solve(int[]preorder,int[]inorder,0,pos-1);
-        ans.right=solve(int[]preorder,int[]inorder,pos+1,inorder.length-1);
+        ans.left=solve(preorder,inorder,0,pos-1);
+        ans.right=solve(preorder,inorder,pos+1,inorder.length-1);
         return ans;
 
     }

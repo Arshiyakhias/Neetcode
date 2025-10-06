@@ -16,7 +16,7 @@
 
 class Solution {
     int count=0;
-    private void preorder(TreeNode root,max){
+    private void preorder(TreeNode root,int max){
         if(root==null){
             return;
         }

@@ -22,6 +22,7 @@ class Solution {
         }
         if(root.val>=max){
             count++;
+            max=Math.max(max,root.val);
         }
         preorder(root.left,max);
         preorder(root.right,max);
